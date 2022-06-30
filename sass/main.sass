@@ -1,0 +1,591 @@
+@import "fonts"
+@import "base"
+@import "vars"
+@import "slick-theme"
+@import "slick"
+
+.flex
+	display: flex
+
+.container
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 10px
+
+
+
+header
+	.settings-menu
+		background-color: #000
+		height: 85px
+		width: 100%
+		color: #fff
+		text-transform: uppercase
+		a
+			font-family: 'montserrat-regular'
+			font-size: 12px
+			color: #fff
+			text-decoration: none
+		.container
+			flex-direction: row
+			justify-content: space-between
+			height: 85px
+			padding-top: 30px
+			.sett-block
+				flex-direction: row
+				justify-content: flex-start
+				#lang-sel
+					width: 140px
+					margin: 0
+					position: relative
+					li, ul
+						list-style: none
+						margin: 0
+						padding: 0
+					li
+						a
+							img
+								margin-bottom: -7px
+								margin-right: 10px
+					#drop-lang
+						position: absolute
+						.drop-lang
+							visibility: hidden
+							width: 120px
+							padding: 5px
+							background-color: #000
+						.drop-lang:hover
+							visibility: visible
+					#drop-lang li:hover ~ .drop-lang
+						visibility: visible
+
+				#devise-sel
+					width: 70px
+					margin: 0
+					position: relative
+					li, ul
+						list-style: none
+						padding: 0
+						margin: 0
+					li
+						a
+							img
+								margin-bottom: -7px
+								margin-right: 10px
+					#drop-lang
+						position: absolute
+						.drop-lang
+							visibility: hidden
+							width: 70px
+							padding: 5px
+							background-color: #000
+						.drop-lang:hover
+							visibility: visible
+					#drop-lang li:hover ~ .drop-lang
+						visibility: visible	
+				.track-order
+					margin-right: 30px
+					a
+						p
+							display: inline
+				.store-loc
+					a
+						p
+							display: inline
+			.authorization-block
+				flex-direction: row
+				justify-content: flex-end
+				.shopping-cart
+					margin-left: 70px
+				.store-loc
+					margin-left: 20px
+
+	.main-header
+		.container
+			flex-direction: column
+			align-items: center
+			.shop-name
+				margin: 95px 0
+				h1
+					font-size: 36px
+					color: #313131
+					font-family: 'georgia'
+					text-transform: uppercase
+			.main-menu
+				flex-direction: row
+				justify-content: space-between
+				position: relative
+				.desktop-menu
+					margin: 0
+					padding: 0
+					li
+						display: inline
+						padding-left: 25px
+						a
+							text-decoration: none
+							font-size: 16px
+							color: $lighten
+							font-family: 'georgia'
+							text-transform: uppercase
+							&:hover
+								color: $black
+						.active
+							color: $black
+				.mobile-menu-box
+					display: none
+					&:hover
+						> .mobile-menu
+							display: block
+					.mobile-menu-button
+						text-transform: uppercase
+						font-size: 16px
+						color: $lighten
+						font-family: 'georgia'
+						display: block
+						padding: 10px 15px
+						color: white
+						background-color: $black
+						text-decoration: none
+						&:hover
+							background-color: lighten($black, 30%)
+					.mobile-menu
+						z-index: 10
+						display: none
+						position: absolute
+						min-width: 120px
+						top: 40px
+						left: 0px
+						background-color: #fff
+						margin: 0
+						padding: 0
+						li
+							display: block
+							border-bottom: 1px solid $lighten
+							a
+								text-decoration: none
+								display: block
+								padding: 10px
+								font-size: 16px
+								color: $lighten
+								font-family: 'georgia'
+								text-transform: uppercase
+								&:hover
+									color: $black
+									text-decoration: underline
+							.active
+								color: $black
+				.search
+					margin-left: 170px
+					border: none
+					width: 120px
+					height: 20px
+					color: $lighten
+					text-transform: uppercase
+					padding: 5px 2px 5px 30px
+					background: url(https://use.fontawesome.com/releases/v5.0.8/svgs/solid/search.svg) no-repeat scroll 5% 50%
+.main-slider
+	background-color: #baf9c4
+	margin-top: 80px
+	position: relative
+	.container
+		.sl
+			.slide
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				height: 520px
+				.slide-text-box
+					max-width: 475px
+					margin-right: 100px
+					.slide-when
+						color: #333333
+						font-size: 24px
+						font-family: 'cairo-regular'
+						text-transform: uppercase
+						margin-bottom: 15px
+					.slide-title
+						color: $black
+						font-size: 36px
+						font-family: 'georgia'
+						text-transform: uppercase
+						margin-bottom: 15px
+					p	
+						color: $lighten
+						font-size: 14px
+						font-family: 'raleway-regular'
+						font-style: italic
+						margin-bottom: 45px
+					.shop-now
+						color: #fff
+						text-transform: uppercase
+						font-size: 14px
+						font-family: 'georgia'
+						padding: 10px
+						text-decoration: none
+						background-color: $black
+						&:hover
+							background-color: lighten($black, 30%)
+				.slide-image-box
+					overflow: hidden
+					height: 520px
+					max-width: 520px
+					img
+						max-height: 100%
+.special-samples
+	margin-top: 100px
+	.container
+		flex-flow: row wrap
+		justify-content: space-between
+		.sample
+			display: flex
+			flex-flow: row nowrap
+			overflow: hidden
+			justify-content: space-between
+			margin: 0 0 30px 0
+			.sample-image-box
+				overflow: hidden
+				position: relative
+				.sample-image
+					max-width: 100%
+			.sample-text-box
+				text-transform: uppercase
+				.sample-name
+					font-size: 18px
+					color: $black
+					font-family: 'georgia'
+				.sample-view
+					text-decoration: none
+					color: #696969
+					font-size: 10px
+					font-family: 'georgia'
+					&:hover
+						text-decoration: underline
+		.sample1
+			width: 650px
+			background-color: #e6eef0
+			height: 275px
+			.sample-text-box
+				margin: auto 30px
+		.sample2
+			width: 460px
+			background-color: #f5f5f5
+			height: 435px
+			.sample-text-box
+				margin: auto 30px 40px
+			.sample-image-box
+				overflow: visible
+				.sample-image
+					position: absolute
+					bottom: 0px
+					right: 0px
+					max-width: none
+		.sample3
+			width: 650px
+			background-color: #f5f5f5
+			height: 435px
+			margin-top: -160px
+			.sample-text-box
+				margin: auto 30px
+		.sample4
+			width: 460px
+			background-color: #e6eef0
+			height: 275px
+			.sample-text-box
+				margin: 30px 30px auto
+.main-products
+	margin-top: 70px
+	.container
+		flex-flow: column nowrap
+		.main-products-tb
+			text-transform: uppercase
+			text-align: center
+			.product-block-name
+				color: $black
+				font-size: 30px
+				font-family: 'Georgia'
+			.product-block-description
+				color: $lighten
+				font-size: 13px
+				font-family: 'cairo-regular'
+		.main-products-cards
+			margin-top: 80px
+			flex-flow: row wrap
+			justify-content: space-between
+			.card
+				position: relative
+				width: 350px
+				height: 465px
+				overflow: hidden
+				margin: 0 5px
+				background-color: #e6eef0
+				z-index: 1
+				margin-bottom: 50px
+				transition: .5s
+				.blend
+					position: absolute
+					top: 0
+					left: 0
+					height: 100%
+					width: 100%
+					background-color: #d2fbfb
+					opacity: 0
+					transition: .5s
+				.card-buttons
+					position: absolute
+					top: 100px
+					left: 50%
+					margin-left: -87.5px
+					width: 175px
+					opacity: 0
+					transition: .5s
+					.add-to-cart
+						border: none
+						background-color: $black
+						color: #fff
+						width: 175px
+						height: 40px
+						font-weight: bold
+						font-family: 'Georgia'
+						font-size: 14px
+						text-transform: uppercase
+						margin-bottom: 25px
+						cursor: pointer
+					.show-gallery
+						text-decoration: none
+						border: 1px solid $black
+						background-color: transparent
+						color: $black
+						padding: 10px 23.8px
+						font-family: 'Georgia'
+						font-weight: bold
+						font-size: 14px
+						text-transform: uppercase
+						visibility: hidden
+					.show-gallery-main
+						visibility: visible
+				&:hover
+					margin-top: -20px
+					box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.2)
+					.blend
+						opacity: .7
+					.card-buttons
+						opacity: 1
+					.main-product-description
+						top: 280px
+				.card-image
+					max-height: 100%
+					display: block
+					margin: 0 auto
+				.main-product-description
+					position: absolute
+					top: 400px
+					left: 0
+					background-color: #fff
+					z-index: 2
+					width: 100%
+					height: 190px
+					text-transform: uppercase
+					transition: .5s
+					.main-product-vis
+						flex-flow: row nowrap
+						justify-content: space-between
+						padding: 10px 25px
+						.main-desc-text-box
+							max-width: 170px
+							.desc-name
+								color: $black
+								font-size: 14px
+								font-family: 'cairo-regular'
+							.desc-category
+								color: $lighten
+								font-size: 14px
+								font-family: 'cairo-regular'
+						.desc-cost
+							max-width: 70px
+							color: #00cccc
+							font-size: 24px
+							font-weight: bold
+							font-family: 'montserrat-regular'
+					.sizes-box
+						padding: 0 25px
+						.sizes-name
+							color: $black
+							font-size: 14px
+							font-family: 'cairo-regular'
+						.available-sizes
+							color: $lighten
+							font-size: 14px
+							font-family: 'cairo-regular'
+					.colors-box
+						padding: 10px 25px
+						.colors-name
+							color: $black
+							font-size: 14px
+							font-family: 'cairo-regular'
+						.available-colors
+							padding-top: 5px
+							.color
+								width: 20px
+								height: 20px
+								border-radius: 50%
+								display: inline-block
+.your-product
+	width: 100%
+	margin-top: 100px
+	position: relative
+	.container
+		height: 560px
+		.yp-text-box
+			text-transform: uppercase
+			margin: auto 0
+			.yp-cost
+				font-size: 18px
+				color: $black
+				font-family: 'cairo-regular'
+			.yp-title
+				font-size: 30px
+				color: $black
+				font-family: 'Georgia'
+				font-weight: bold
+				span
+					font-weight: normal
+			a
+				text-decoration: none
+				font-size: 18px
+				color: $lighten
+				font-family: 'georgia'
+	.yp-image-box
+		position: absolute
+		top: 0
+		right: 0
+		height: 560px
+		width: 965px
+		background-image: url(../../img/special-img.png)
+		background-size: cover
+		border-top-left-radius: 150px
+		border-bottom-left-radius: 400px
+.offers
+	margin-top: 65px
+	.container
+		flex-flow: row nowrap
+		justify-content: space-between
+		.offers-text-box
+			flex: 2 1 580px
+			margin: auto 0
+			.offer-title
+				text-transform: uppercase
+				font-size: 36px
+				color: $black
+				font-family: 'georgia'
+			.offer-discribe
+				font-size: 18px
+				color: $lighten
+				font-family: 'raleway-regular'
+				margin: 55px 0 120px 
+			.offer-link
+				text-decoration: none
+				background-color: $black
+				color: #fff
+				padding: 15px 23.8px
+				font-family: 'Georgia'
+				font-weight: normal
+				font-size: 14px
+				text-transform: uppercase
+				&:hover
+					background-color: lighten($black, 30%)
+		.offers-image-box	
+			flex: 0 1 555px
+			height: 100%
+			overflow: hidden
+			max-height: 900px
+			margin: auto 0
+			img
+				max-height: 100%
+				display: block
+				margin: 0 auto
+.dispatch
+	margin: 100px 0
+	.container
+		flex-flow: row wrap
+		justify-content: space-between
+		align-items: center
+		.dispatch-text-box
+			h4
+				text-transform: uppercase
+				font-size: 14px
+				color: $black
+				font-family: 'cairo-regular'
+		.dispatch-input-box
+			.dispatch-input
+				padding: 0
+				margin: 0
+				margin-right: -5px
+				text-transform: uppercase
+				font-size: 14px
+				color: $lighten
+				font-family: 'cairo-regular'
+				height: 50px
+				width: 280px
+				padding-left: 20px
+				border: 1px solid #000
+			.dispatch-button
+				padding: 0
+				margin: 0
+				text-transform: uppercase
+				font-size: 14px
+				color: #fff
+				font-family: 'Georgia'
+				border: none
+				width: 120px
+				height: 50px
+				background-color: $black
+				cursor: pointer
+				&:hover
+					background-color: lighten($black, 30%)
+footer
+	.container
+		flex-flow: row wrap
+		justify-content: space-between
+		align-items: center
+		padding: 100px 10px
+		border-top: 1px solid #dddddd
+		.shop-name
+			h1
+				text-transform: uppercase
+				font-size: 30px
+				color: #313131
+				font-family: 'Georgia'
+		.main-menu
+			ul
+				margin: 0
+				padding: 0
+				li
+					display: inline
+					padding-left: 25px
+					a
+						text-decoration: none
+						font-size: 14px
+						color: $lighten
+						font-family: 'Georgia'
+						text-transform: uppercase
+						&:hover
+							color: $black
+					.active
+						color: $black
+		.follow-box
+			flex-flow: row nowrap
+			text-transform: uppercase
+			font-size: 14px
+			color: $black
+			font-family: 'Georgia'
+			font-weight: bold
+			p
+				margin-right: 25px
+			a
+				font-size: 14px
+				margin-left: 25px
+				text-decoration: none
+				color: $lighten
+
+@import "media"
